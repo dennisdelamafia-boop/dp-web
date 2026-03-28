@@ -1,0 +1,127 @@
+/* --- RESET GENERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #f5f5f5; /* Blanco hueso suave */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- TU FOTO COMO FONDO (LA MAGIA) --- */
+/* Asegúrate de que tu foto se llame 'dennis-paul.png' y esté en la misma carpeta */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('dennis-paul.png'); /* Reemplaza por tu foto */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Sutil transparencia para que se vea el contenido */
+    z-index: -1;
+}
+
+/* --- CONTENEDOR PRINCIPAL (Minimalista y centrado) --- */
+.contenedor-principal {
+    max-width: 650px;
+    padding: 40px;
+    text-align: center;
+    z-index: 1; /* Para que esté sobre la foto */
+}
+
+/* --- TÍTULOS (Playfair Display) --- */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+/* DP en Rojo Vino (el acento) */
+.marca-dp {
+    color: #722F37;
+}
+
+/* Legal & Financiero en Blanco Hueso */
+.marca-servicios {
+    color: #f5f5f5;
+}
+
+.slogan {
+    font-style: italic;
+    color: #cccccc;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* --- SERVICIOS (Las cajitas) --- */
+.servicios {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.servicio-item {
+    background: rgba(255, 255, 255, 0.05); /* Cristal traslúcido */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #722F37; /* Borde rojo vino */
+    flex: 1;
+    /* --- TRANSICIÓN SUAVE (Dinamismo) --- */
+    transition: all 0.3s ease-in-out;
+}
+
+.servicio-item h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.servicio-item p {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+/* --- INTERACCIÓN DE LOS SERVICIOS (Hover/Levante) --- */
+.servicio-item:hover {
+    background: rgba(255, 255, 255, 0.1); /* Fondo un poco más claro */
+    transform: translateY(-8px); /* Se levanta suavemente */
+    border-left-color: #a0454e; /* El rojo se vuelve más brillante */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra difuminada roja */
+    cursor: pointer;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-info {
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* --- BOTÓN WHATSAPP --- */
+.btn-whatsapp {
+    background-color: #722F37; /* Rojo vino */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* --- TRANSICIÓN SUAVE --- */
+    transition: all 0.3s ease;
+}
+
+/* Interacción del botón */
+.btn-whatsapp:hover {
+    background-color: #a0454e; /* Un poco más claro */
+    transform: scale(1.05); /* Se agranda un poquito */
+    box-shadow: 0 6px 15px rgba(114, 47, 55, 0.4); /* Sombra roja sutil */
+}
